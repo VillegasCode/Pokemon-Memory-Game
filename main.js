@@ -43,7 +43,7 @@ function bloquearTarjetas(){
     for (let i=0; i<=15; i++){
         //console.log(numeros.length);
         let tarjetaBloqueada = document.getElementById(i);
-        tarjetaBloqueada.innerHTML = numeros[i];
+        tarjetaBloqueada.innerHTML = `<img src="./images/${numeros[i]}.png" alt="">`;
         tarjetaBloqueada.disabled = true;
     }
 }
@@ -74,7 +74,7 @@ function destapar(id) {
         tarjeta2 = document.getElementById(id);
         //Second button pressed id captured
         segundoResultado = numeros[id];
-        tarjeta2.innerHTML = segundoResultado;
+        tarjeta2.innerHTML = `<img src="./images/${segundoResultado}.png" alt="">`;;
 
         //Disabled second button
         tarjeta2.disabled = true;
