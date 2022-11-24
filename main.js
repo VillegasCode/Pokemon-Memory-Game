@@ -65,7 +65,7 @@ function destapar(id) {
         tarjeta1 = document.getElementById(id);
         //First button pressed id captured
         primerResultado = numeros[id];
-        tarjeta1.innerHTML = primerResultado;
+        tarjeta1.innerHTML = `<img src="./images/${primerResultado}.png" alt="">`;
 
         //Disable the first button pushed
         tarjeta1.disabled = true;
