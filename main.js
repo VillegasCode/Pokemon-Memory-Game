@@ -112,8 +112,8 @@ function destapar(id) {
     } else {
         //Show for a moment values and come back to hidden
         setTimeout(()=>{
-            tarjeta1.innerHTML = ' ';
-            tarjeta2.innerHTML = ' ';
+            tarjeta1.innerHTML = `<img class="portada" src="./images/pikachuVillegasCODE.png">`;
+            tarjeta2.innerHTML = `<img class="portada" src="./images/pikachuVillegasCODE.png">`;
             tarjeta1.disabled = false;
             tarjeta2.disabled = false;
             tarjetasDestapadas = 0;
