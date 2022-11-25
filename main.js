@@ -73,6 +73,7 @@ function destapar(id) {
         tarjeta1 = document.getElementById(id);
         //First button pressed id captured
         primerResultado = numeros[id];
+        clickAudio.play();
         tarjeta1.innerHTML = `<img src="./images/${primerResultado}.png" alt="">`;
 
         //Disable the first button pushed
