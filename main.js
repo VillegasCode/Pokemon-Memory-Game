@@ -17,6 +17,13 @@ let mostrarMovimientos = document.getElementById('movimientos');
 let mostrarAciertos = document.getElementById('aciertos');
 let mostrarTiempo = document.getElementById('t-restante');
 
+//Sounds to the Pokemon Memory Game
+let winAudio = new Audio('./sounds/win.wav');
+let loseAudio = new Audio('./sounds/lose.wav');
+let clickAudio = new Audio('./sounds/click.wav');
+let rightAudio = new Audio('./sounds/right.wav');
+let wrongAudio = new Audio('./sounds/wrong.wav');
+
 //Create a array with numbers
 let numeros = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8];
 
