@@ -40,6 +40,7 @@ function contarTiempo(){
     if (timer == 0) {
         clearInterval(tiempoRegresivoId);
         bloquearTarjetas();
+        loseAudio.play();
     }
     }, 1000);
 }
@@ -93,7 +94,7 @@ function destapar(id) {
         if (primerResultado == segundoResultado){
             //Reset counter of upface cards
             tarjetasDestapadas = 0;
-
+            rightAudio.play();
             //Increase hits
             aciertos++;
             mostrarAciertos.innerHTML = `Aciertos: ${aciertos}`;
@@ -104,6 +105,7 @@ function destapar(id) {
                 mostrarAciertos.innerHTML = `Aciertos: ${aciertos} 👏`;
                 mostrarTiempo.innerHTML = `Fantástico! ⏰ Sólo demoraste ${timerInicial - timer} segundos`;
                 mostrarMovimientos.innerHTML = `Movimientos: ${movimientos} 🤟😎`;
+                winAudio.play();
             }
 
     } else {
@@ -114,6 +116,7 @@ function destapar(id) {
             tarjeta1.disabled = false;
             tarjeta2.disabled = false;
             tarjetasDestapadas = 0;
+            wrongAudio.play();
         }, 800);
     }
     }
