@@ -16,6 +16,7 @@ let tiempoRegresivoId = null;
 let mostrarMovimientos = document.getElementById('movimientos');
 let mostrarAciertos = document.getElementById('aciertos');
 let mostrarTiempo = document.getElementById('t-restante');
+let ocultarBoton = document.getElementById("reiniciar").style.visibility = 'hidden';
 
 //Sounds to the Pokemon Memory Game
 let winAudio = new Audio('./sounds/win.wav');
@@ -54,6 +55,8 @@ function bloquearTarjetas(){
         tarjetaBloqueada.innerHTML = `<img src="./images/${numeros[i]}.png" alt="">`;
         tarjetaBloqueada.disabled = true;
     }
+    // Mostrar Botón para reiniciar juego
+    let mostrarBoton = document.getElementById("reiniciar").style.visibility = 'visible';
 }
 
 
@@ -78,9 +81,15 @@ function destapar(id) {
 
         //Disable the first button pushed
         tarjeta1.disabled = true;
+        if (timer == 0) {
+            bloquearTarjetas();
+        }
     } else if(tarjetasDestapadas == 2){
         //Show second number
         tarjeta2 = document.getElementById(id);
+        if (timer == 0) {
+            bloquearTarjetas();
+        }
         //Second button pressed id captured
         segundoResultado = numeros[id];
         tarjeta2.innerHTML = `<img src="./images/${segundoResultado}.png" alt="">`;;
@@ -99,7 +108,6 @@ function destapar(id) {
             //Increase hits
             aciertos++;
             mostrarAciertos.innerHTML = `Aciertos: ${aciertos}`;
-
             if (aciertos == 8) {
                 //STOP THE COUNTER
                 clearInterval(tiempoRegresivoId);
@@ -107,6 +115,7 @@ function destapar(id) {
                 mostrarTiempo.innerHTML = `Fantástico! ⏰ Sólo demoraste ${timerInicial - timer} segundos`;
                 mostrarMovimientos.innerHTML = `Movimientos: ${movimientos} 🤟😎`;
                 winAudio.play();
+                mostrarBoton = document.getElementById('reiniciar').style.visibility = 'visible';
             }
 
     } else {
@@ -118,6 +127,9 @@ function destapar(id) {
             tarjeta2.disabled = false;
             tarjetasDestapadas = 0;
             wrongAudio.play();
+            if (timer == 0) {
+                bloquearTarjetas();
+            }
         }, 800);
     }
     }
