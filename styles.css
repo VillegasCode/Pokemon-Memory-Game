@@ -26,6 +26,13 @@ body{
         text-align: center;
     }
     
+    #reiniciar {
+        width: 200px;
+        height: 50px;
+        font-size: large;
+    }
+
+
     button{
         height: 100px;
         width: 100px;
