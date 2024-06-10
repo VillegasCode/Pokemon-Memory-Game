@@ -1,11 +1,11 @@
 <div align="center" id="top">
+  <h1>Pokemon Memory Game</h1>
   <img src="https://github.com/VillegasCode/Pokemon-Memory-Game/blob/main/images/app-pokemon-memory-game.png" width="900" alt="Pokemon Memory Game" />
 
-  <a href="https://villegascode.github.io/Pokemon-Memory-Game/">Prueba el juego POKEMON MEMORY GAME aquí</a>
+  <a href="https://villegascode.github.io/Pokemon-Memory-Game/" target="_blank">Try the Pokemon Memory Game click here</a>
 </div>
 
 <div align="center">
-  <h1>Pokemon Memory Game</h1>
   <h3>A memory game of Pokemon characters</h3>
 </div>
 
@@ -23,7 +23,7 @@ This is a memory game created with Pokémon characters, you have to find the pai
 The statistics show us "Aciertos - Successes", "Movimientos - Moves" and "Tiempo - Time" and when the game ends they show us a button called "Volver a Jugar - Replay" to play again.
 
 <p align="center">
-<i>Loved the game? Please consider <a href="https://www.paypal.me/villegasalexander">donating 💸</a> to support its continuous<br/> improvement and development!</i>
+<i>Loved the game? Please consider <a href="https://www.paypal.me/villegasalexander" target="_blank">donating 💸</a> to support its continuous<br/> improvement and development!</i>
 </p>
 
 ## :rocket: Main Technologies ##
@@ -39,7 +39,7 @@ The statistics show us "Aciertos - Successes", "Movimientos - Moves" and "Tiempo
 
 ## :white_check_mark: Requirements ##
 
-Anything only clic on the next link: 
+None, just click on the following link: <a href="https://villegascode.github.io/Pokemon-Memory-Game/" target="_blank">Try the Pokemon Memory Game click here</a>
 
 ## :memo: License ##
 
